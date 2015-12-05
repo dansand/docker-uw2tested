@@ -9,3 +9,5 @@ RUN xvfbrun.sh ./testNotebook.py TestDocTests.ipynb ../docs/tutorials/* ../docs/
 
 WORKDIR /workspace
 
+# launch notebook
+CMD ["jupyter", "notebook"]
