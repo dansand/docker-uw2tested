@@ -1,4 +1,4 @@
-FROM underworldcode/underworld2-dev
+FROM dansand/underworld2-dev
 MAINTAINER mansourjohn@gmail.com
 
 # set working directory to /root
