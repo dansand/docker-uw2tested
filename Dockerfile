@@ -6,7 +6,8 @@ WORKDIR /root/underworld2/utils
 
 # run tests
 #RUN xvfbrun.sh ./testNotebook.py ../docs/test/TestDocTests.ipynb ../docs/tutorials/* ../docs/test/*.ipynb \
-pip install \
+
+RUN pip install \
 networkx \
 
 WORKDIR /workspace
