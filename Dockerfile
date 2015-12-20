@@ -1,16 +1,9 @@
+
+# use underworldcode/underworld2 for the tested version
 FROM underworldcode/underworld2-dev
-MAINTAINER mansourjohn@gmail.com
+MAINTAINER dantheman@something.com
 
-# set working directory to /root
-WORKDIR /root/underworld2/utils
-
-# run tests
-#RUN xvfbrun.sh ./testNotebook.py ../docs/test/TestDocTests.ipynb ../docs/tutorials/* ../docs/test/*.ipynb \
-
+# install whatever you want
 RUN pip install \
-networkx \
+        networkx \
 
-WORKDIR /workspace
-
-# launch notebook
-CMD ["jupyter", "notebook"]
