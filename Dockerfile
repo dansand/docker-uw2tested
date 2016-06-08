@@ -32,14 +32,15 @@ RUN git clone --branch "development" --single-branch https://github.com/underwor
     mkdir /workspace                                                 && \
     rsync -av /root/underworld2/docs/examples /workspace             && \
     rsync -av /root/underworld2/docs/user_guide /workspace           && \
-    rsync -av /root/underworld2/docs/publications /workspace         && \
-    cd ../../..                        && \
-    cd slippy2                   && \
+    rsync -av /root/underworld2/docs/publications /workspace
+    
+RUN cd ../../../slippy2                        && \
     pip install -e .             && \
         cd ..                    && \
     pip install \
         easydict \
         naturalsort \
+        pint
 
 # expose notebook port
 EXPOSE 8888
