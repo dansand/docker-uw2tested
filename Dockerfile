@@ -40,7 +40,6 @@ RUN git clone --branch "development" --single-branch https://github.com/underwor
     pip install \
         easydict \
         naturalsort \
-        pint \
 
 # expose notebook port
 EXPOSE 8888
