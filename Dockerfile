@@ -9,7 +9,6 @@ ENV PYTHONPATH $PYTHONPATH:/root/underworld2
 
 # get underworld, compile, delete some unnecessary files, trust notebooks, copy to workspace
 RUN git clone --branch "development" --single-branch https://github.com/underworldcode/underworld2 && \
-    git clone  https://github.com/dansand/slippy2 && \
     cd underworld2/libUnderworld && \
     ./configure.py               && \
     ./scons.py                   && \
@@ -34,7 +33,8 @@ RUN git clone --branch "development" --single-branch https://github.com/underwor
     rsync -av /root/underworld2/docs/user_guide /workspace           && \
     rsync -av /root/underworld2/docs/publications /workspace
     
-RUN cd slippy2                   && \
+RUN git clone  https://github.com/dansand/slippy2 && \
+    cd slippy2                   && \
     pip install -e .             && \
         cd ..                    && \
     pip install \
