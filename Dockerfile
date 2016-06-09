@@ -34,7 +34,7 @@ RUN git clone --branch "development" --single-branch https://github.com/underwor
     rsync -av /root/underworld2/docs/user_guide /workspace           && \
     rsync -av /root/underworld2/docs/publications /workspace
     
-RUN cd ../../../slippy2                        && \
+RUN cd slippy2                   && \
     pip install -e .             && \
         cd ..                    && \
     pip install \
