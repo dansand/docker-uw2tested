@@ -1,5 +1,5 @@
 FROM underworldcode/base:dev
-MAINTAINER mansourjohn@gmail.com
+MAINTAINER sonderfjord@gmail.com
 
 # set working directory to /root
 WORKDIR /root
@@ -40,6 +40,7 @@ RUN cd slippy2                   && \
     pip install \
         easydict \
         naturalsort \
+        networkx \
         pint
 
 # expose notebook port
