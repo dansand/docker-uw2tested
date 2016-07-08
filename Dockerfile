@@ -1,7 +1,7 @@
 FROM underworldcode/base:dev
 MAINTAINER sonderfjord@gmail.com
 
-# set working directory to /root
+## set working directory to /root
 WORKDIR /root
 
 # setup environment
