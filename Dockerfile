@@ -42,6 +42,9 @@ RUN git clone  https://github.com/dansand/slippy2 && \
         naturalsort \
         networkx \
         pint
+        
+RUN pip install \
+        scipy
 
 # expose notebook port
 EXPOSE 8888
