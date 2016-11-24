@@ -45,6 +45,9 @@ RUN git clone  https://github.com/dansand/slippy2 && \
         
 RUN pip install \
         scipy
+        
+RUN pip install \
+        pandas
 
 # expose notebook port
 EXPOSE 8888
