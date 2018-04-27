@@ -59,7 +59,13 @@ VOLUME /workspace/user_data
 WORKDIR /workspace
 
 # launch notebook
-CMD ["jupyter", "notebook", " --no-browser"]
+#CMD ["jupyter", "notebook", " --no-browser"]
 
 # launch notebook
 #CMD ["jupyter", "notebook", " --no-browser"]
+
+# Trust underworld notebooks
+RUN find -name \*.ipynb  -print0 | xargs -0 jupyter trust
+
+# launch notebook
+CMD ["jupyter", "notebook", "--ip='*'", "--no-browser"]
