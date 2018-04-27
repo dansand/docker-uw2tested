@@ -65,7 +65,7 @@ WORKDIR /workspace
 #CMD ["jupyter", "notebook", " --no-browser"]
 
 # Trust underworld notebooks
-RUN find -name \*.ipynb  -print0 | xargs -0 jupyter trust
+#RUN find -name \*.ipynb  -print0 | xargs -0 jupyter trust
 
 # launch notebook
 CMD ["jupyter", "notebook", "--ip='*'", "--no-browser", --allow-root]
