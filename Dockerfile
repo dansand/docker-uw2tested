@@ -68,4 +68,4 @@ WORKDIR /workspace
 RUN find -name \*.ipynb  -print0 | xargs -0 jupyter trust
 
 # launch notebook
-CMD ["jupyter", "notebook", "--ip='*'", "--no-browser"]
+CMD ["jupyter", "notebook", "--ip='*'", "--no-browser", --allow-root]
