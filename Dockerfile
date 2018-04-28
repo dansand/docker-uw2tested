@@ -2,6 +2,8 @@ FROM underworldcode/underworld2_untested:slade
 MAINTAINER d.sandiford@unimelb.edu
 
 # Dan dependencies
+WORKDIR /opt
+
 RUN pip install networkx
 RUN pip install easydict 
 RUN pip install naturalsort
