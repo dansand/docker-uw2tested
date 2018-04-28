@@ -24,4 +24,4 @@ ENV PYTHONPATH /workspace/user_data/UWGeodynamics:$PYTHONPATH
 WORKDIR /workspace
 
 # launch notebook
-CMD ["jupyter", "notebook", "--ip='*'", "--no-browser", --allow-root]
+CMD ["jupyter", "notebook", "--ip='*'", "--no-browser"]
