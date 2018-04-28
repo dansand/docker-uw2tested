@@ -7,7 +7,7 @@ WORKDIR /opt
 RUN pip install networkx
 RUN pip install easydict 
 RUN pip install naturalsort
-RUN pip install networkx<2.0
+RUN pip install "networkx==1.11"
 RUN pip install pint
 RUN pip install pandas
 
