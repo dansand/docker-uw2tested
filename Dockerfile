@@ -12,7 +12,7 @@ RUN pip install pandas
 ENV UW2_DIR /opt/underworld2
 
 # copy this file over so that no password is required
-COPY jupyter_notebook_config.json /home/root/.jupyter/jupyter_notebook_config.json
+#COPY jupyter_notebook_config.json /home/root/.jupyter/jupyter_notebook_config.json
 
 # change user and update pythonpath
 ENV PYTHONPATH $PYTHONPATH:$UW2_DIR
