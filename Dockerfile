@@ -18,7 +18,7 @@ COPY docs/development/docker/underworld2_untested/jupyter_notebook_config.json /
 # install lavavu
 RUN pip install --no-cache-dir lavavu
 
-# pyBadlands dependencies
+# Dan dependencies
 RUN pip install networkx
 RUN pip install easydict 
 RUN pip install naturalsort
