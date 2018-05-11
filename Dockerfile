@@ -1,4 +1,4 @@
-FROM underworldcode/underworld2_untested:slade
+FROM underworldcode/underworld2:magnus2.5.1b_magnus
 MAINTAINER d.sandiford@unimelb.edu
 
 # Dan dependencies
@@ -12,6 +12,11 @@ RUN pip install pint
 RUN pip install pandas
 
 ENV UW2_DIR /opt/underworld2
+
+RUN cd /opt/underworld2 && \
+    git checkout slade && \
+    ./configure.py --with-debugging=0 --petsc-dir=/opt/petsc --hdf5-dir=/opt/petsc && \
+    ./compile.py
 
 # copy this file over so that no password is required
 #COPY jupyter_notebook_config.json /home/root/.jupyter/jupyter_notebook_config.json
