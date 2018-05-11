@@ -11,6 +11,10 @@ RUN pip install "networkx==1.11"
 RUN pip install pint
 RUN pip install pandas
 
+
+
+
+
 ENV UW2_DIR /opt/underworld2
 
 RUN cd /opt/underworld2 && \
@@ -21,9 +25,12 @@ RUN cd /opt/underworld2 && \
 # copy this file over so that no password is required
 #COPY jupyter_notebook_config.json /home/root/.jupyter/jupyter_notebook_config.json
 
+RUN git clone https://github.com/dansand/UWsubduction.git
+
 # change user and update pythonpath
 ENV PYTHONPATH $PYTHONPATH:$UW2_DIR
-ENV PYTHONPATH /workspace/user_data/UWGeodynamics:$PYTHONPATH
+#ENV PYTHONPATH /workspace/user_data/UWGeodynamics:$PYTHONPATH
+ENV PYTHONPATH /opt/UWsubduction:$PYTHONPATH
 
 # move back to workspace directory
 WORKDIR /workspace
