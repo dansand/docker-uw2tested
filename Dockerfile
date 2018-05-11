@@ -19,8 +19,10 @@ ENV UW2_DIR /opt/underworld2
 
 RUN cd /opt && \
     rm -fr underworld2 && \
-    git clone --branch "slade" https://github.com/underworldcode/underworld2 && \
-    cd underworld2 && \
+    git clone --branch "slade" https://github.com/underworldcode/underworld2
+
+
+RUN cd underworld2/libUnderworld && \
     ./configure.py --with-debugging=0 --petsc-dir=/opt/petsc --hdf5-dir=/opt/petsc && \
     ./compile.py
 
