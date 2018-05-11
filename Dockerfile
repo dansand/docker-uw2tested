@@ -17,9 +17,10 @@ RUN pip install pandas
 
 ENV UW2_DIR /opt/underworld2
 
-RUN cd /opt/underworld2 && \
-    git fetch && \
-    git checkout slade && \
+RUN cd /opt && \
+    rm -fr underworld2 && \
+    git checkout --branch slade https://github.com/underworldcode/underworld2 && \
+    cd underworld2 && \
     ./configure.py --with-debugging=0 --petsc-dir=/opt/petsc --hdf5-dir=/opt/petsc && \
     ./compile.py
 
