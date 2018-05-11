@@ -1,4 +1,4 @@
-FROM underworldcode/underworld2:magnus2.5.1b_magnus
+FROM underworldcode/underworld2:2.5.1b_magnus
 MAINTAINER d.sandiford@unimelb.edu
 
 # Dan dependencies
