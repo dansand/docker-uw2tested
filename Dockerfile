@@ -1,4 +1,6 @@
-FROM underworldcode/underworld2:2.5.1b_magnus
+FROM underworldcode/underworld2_untested:dev_magnus_newmpi_optmod
+
+dev_magnus_newmpi_optmod
 MAINTAINER d.sandiford@unimelb.edu
 
 # Dan dependencies
