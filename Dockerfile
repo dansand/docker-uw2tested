@@ -5,12 +5,12 @@ MAINTAINER d.sandiford@unimelb.edu
 # Dan dependencies
 WORKDIR /opt
 
-RUN pip install networkx
-RUN pip install easydict
-RUN pip install naturalsort
-RUN pip install "networkx==1.11"
-RUN pip install pint
-RUN pip install pandas
+RUN pip3 install networkx
+RUN pip3 install easydict
+RUN pip3 install naturalsort
+RUN pip3 install "networkx==1.11"
+RUN pip3 install pint
+RUN pip3 install pandas
 
 
 
